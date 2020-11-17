@@ -1,0 +1,33 @@
+# Python
+__pycache__
+.pytest_cache
+
+# Images
+*.png
+*.jpg
+*.jpeg
+*.gif
+!media/**/*.jpg
+!media/**/*.jpeg
+!media/**/*.png
+
+# Training
+runs/
+tmp/
+logs/
+checkpoints/
+*.pt
+*.pth
+pretrained/*.pt
+torch.egg-info/
+
+# IDE
+.idea
+.vscode
+
+# Jupyter
+.ipynb_checkpoints
+
+# Misc
+*.pem
+.DS_Store
