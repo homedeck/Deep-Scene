@@ -5,6 +5,7 @@
 
 from argparse import ArgumentParser
 from colorama import Fore, Style
+from os import environ
 from suya import set_suya_access_key
 from suya.torch import LabeledDataset
 from torch import device as get_device
@@ -30,7 +31,7 @@ parser.add_argument("--batch-size", type=int, default=16, help="Minibatch size")
 args = parser.parse_args()
 
 # Create dataset
-set_suya_access_key(args.suya_key)
+set_suya_access_key(args.suya_key or environ.get("SUYA_ACCESS_KEY"))
 transform = Compose([
     Resize(512),
     CenterCrop(512),
