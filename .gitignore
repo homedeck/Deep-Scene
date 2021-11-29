@@ -18,7 +18,7 @@ logs/
 checkpoints/
 *.pt
 *.pth
-pretrained/*.pt
+!pretrained/*.pt
 torch.egg-info/
 
 # IDE
